@@ -13,12 +13,6 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
-eureka:
-    client:
-        enabled: true
-    instance:
-        appname: AppFusion
-        instanceId: AppFusion:${spring.application.instance-id:${random.value}}
 
 spring:
     application:
@@ -49,14 +43,6 @@ spring:
             hibernate.cache.use_query_cache: false
             hibernate.generate_statistics: true
             hibernate.hbm2ddl.auto: validate
-    data:
-        elasticsearch:
-            cluster-name:
-            cluster-nodes:
-            properties:
-                path:
-                    logs: build/elasticsearch/log
-                    data: build/elasticsearch/data
     mail:
         host: localhost
     messages:
@@ -106,7 +92,7 @@ jhipster:
     security:
         authentication:
             jwt:
-                secret: df560e328ca2037bb0c7b633d8ad6bba5177be89
+                secret: 5937b5f350e30fb3faa3e3eacf3e9b5c23cadb09
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration

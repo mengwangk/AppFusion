@@ -21,12 +21,9 @@ import net.logstash.logback.stacktrace.ShortenedThrowableConverter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ConditionalOnProperty("eureka.client.enabled")
 public class LoggingConfiguration {
     private static final String LOGSTASH_APPENDER_NAME = "LOGSTASH";
     private static final String ASYNC_LOGSTASH_APPENDER_NAME = "ASYNC_LOGSTASH";
@@ -39,17 +36,14 @@ public class LoggingConfiguration {
 
     private final String serverPort;
 
-    private final EurekaInstanceConfigBean eurekaInstanceConfigBean;
-
     private final String version;
 
     private final JHipsterProperties jHipsterProperties;
 
     public LoggingConfiguration(@Value("${spring.application.name}") String appName, @Value("${server.port}") String serverPort,
-        EurekaInstanceConfigBean eurekaInstanceConfigBean, JHipsterProperties jHipsterProperties, @Value("${info.project.version}") String version) {
+         JHipsterProperties jHipsterProperties, @Value("${info.project.version}") String version) {
         this.appName = appName;
         this.serverPort = serverPort;
-        this.eurekaInstanceConfigBean = eurekaInstanceConfigBean;
         this.jHipsterProperties = jHipsterProperties;
         this.version = version;
         if (jHipsterProperties.getLogging().getLogstash().isEnabled()) {

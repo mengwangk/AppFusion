@@ -12,10 +12,7 @@ import {
     LoginService,
     LoginModalService,
     Principal,
-    JhiTrackerService,
     HasAnyAuthorityDirective,
-    JhiSocialComponent,
-    SocialService,
     JhiLoginModalComponent
 } from './';
 
@@ -25,7 +22,6 @@ import {
         AppFusionSharedCommonModule
     ],
     declarations: [
-        JhiSocialComponent,
         JhiLoginModalComponent,
         HasAnyAuthorityDirective
     ],
@@ -36,16 +32,13 @@ import {
         StateStorageService,
         Principal,
         CSRFService,
-        JhiTrackerService,
         AuthServerProvider,
-        SocialService,
         UserService,
         DatePipe
     ],
     entryComponents: [JhiLoginModalComponent],
     exports: [
         AppFusionSharedCommonModule,
-        JhiSocialComponent,
         JhiLoginModalComponent,
         HasAnyAuthorityDirective,
         DatePipe
