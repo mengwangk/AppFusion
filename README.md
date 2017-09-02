@@ -1,2 +1,2 @@
 # AppFusion
-Sample full-stack framework for building Java apps.
+Full-stack Java framework examples.
