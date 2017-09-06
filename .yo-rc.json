@@ -37,6 +37,7 @@
     "languages": [
       "en",
       "zh-cn"
-    ]
+    ],
+    "herokuAppName": "app-fusion"
   }
 }
