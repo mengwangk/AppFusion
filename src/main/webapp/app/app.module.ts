@@ -54,4 +54,4 @@ import {
     ],
     bootstrap: [ JhiMainComponent ]
 })
-export class AppfusionAppModule {}
+export class AppFusionAppModule {}

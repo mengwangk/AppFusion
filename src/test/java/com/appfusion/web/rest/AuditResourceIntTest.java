@@ -33,7 +33,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see AuditResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = AppfusionApp.class)
+@SpringBootTest(classes = AppFusionApp.class)
 @Transactional
 public class AuditResourceIntTest {
 

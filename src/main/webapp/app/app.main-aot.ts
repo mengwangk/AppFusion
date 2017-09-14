@@ -1,9 +1,9 @@
 import { platformBrowser } from '@angular/platform-browser';
 import { ProdConfig } from './blocks/config/prod.config';
-import { AppfusionAppModuleNgFactory } from '../../../../build/aot/src/main/webapp/app/app.module.ngfactory';
+import { AppFusionAppModuleNgFactory } from '../../../../build/aot/src/main/webapp/app/app.module.ngfactory';
 
 ProdConfig();
 
-platformBrowser().bootstrapModuleFactory(AppfusionAppModuleNgFactory)
+platformBrowser().bootstrapModuleFactory(AppFusionAppModuleNgFactory)
 .then((success) => console.log(`Application started`))
 .catch((err) => console.error(err));

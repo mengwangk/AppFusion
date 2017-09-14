@@ -29,7 +29,7 @@ import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = AppfusionApp.class)
+@SpringBootTest(classes = AppFusionApp.class)
 public class MailServiceIntTest {
 
     @Autowired

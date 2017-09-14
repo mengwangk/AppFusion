@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see ProfileInfoResource
  **/
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = AppfusionApp.class)
+@SpringBootTest(classes = AppFusionApp.class)
 public class ProfileInfoResourceIntTest {
 
     @Mock

@@ -48,7 +48,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see AccountResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = AppfusionApp.class)
+@SpringBootTest(classes = AppFusionApp.class)
 public class AccountResourceIntTest {
 
     @Autowired
