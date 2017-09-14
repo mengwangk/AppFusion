@@ -24,13 +24,13 @@ import java.util.Collection;
 @ComponentScan
 @EnableAutoConfiguration(exclude = {MetricFilterAutoConfiguration.class, MetricRepositoryAutoConfiguration.class})
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
-public class AppfusionApp {
+public class AppFusionApp {
 
-    private static final Logger log = LoggerFactory.getLogger(AppfusionApp.class);
+    private static final Logger log = LoggerFactory.getLogger(AppFusionApp.class);
 
     private final Environment env;
 
-    public AppfusionApp(Environment env) {
+    public AppFusionApp(Environment env) {
         this.env = env;
     }
 
@@ -61,7 +61,7 @@ public class AppfusionApp {
      * @throws UnknownHostException if the local host name could not be resolved into an address
      */
     public static void main(String[] args) throws UnknownHostException {
-        SpringApplication app = new SpringApplication(AppfusionApp.class);
+        SpringApplication app = new SpringApplication(AppFusionApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         String protocol = "http";

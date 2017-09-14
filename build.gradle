@@ -41,7 +41,7 @@ version = '0.0.1-SNAPSHOT'
 description = ''
 
 bootRepackage {
-   mainClass = 'com.appfusion.AppfusionApp'
+   mainClass = 'com.appfusion.AppFusionApp'
 }
 
 war {
@@ -49,7 +49,7 @@ war {
 }
 
 springBoot {
-    mainClass = 'com.appfusion.AppfusionApp'
+    mainClass = 'com.appfusion.AppFusionApp'
     executable = true
     buildInfo()
 }

@@ -1,6 +1,6 @@
 package com.appfusion.service;
 
-import com.appfusion.AppfusionApp;
+import com.appfusion.AppFusionApp;
 import com.appfusion.domain.User;
 import io.github.jhipster.config.JHipsterProperties;
 import org.junit.Before;

@@ -1,6 +1,6 @@
 package com.appfusion.web.rest;
 
-import com.appfusion.AppfusionApp;
+import com.appfusion.AppFusionApp;
 import com.appfusion.domain.Authority;
 import com.appfusion.domain.User;
 import com.appfusion.repository.AuthorityRepository;

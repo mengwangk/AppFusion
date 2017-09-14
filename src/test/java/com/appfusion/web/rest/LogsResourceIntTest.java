@@ -1,6 +1,6 @@
 package com.appfusion.web.rest;
 
-import com.appfusion.AppfusionApp;
+import com.appfusion.AppFusionApp;
 import com.appfusion.web.rest.vm.LoggerVM;
 import ch.qos.logback.classic.AsyncAppender;
 import ch.qos.logback.classic.LoggerContext;

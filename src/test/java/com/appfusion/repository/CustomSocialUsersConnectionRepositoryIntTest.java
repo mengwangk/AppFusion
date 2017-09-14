@@ -1,6 +1,6 @@
 package com.appfusion.repository;
 
-import com.appfusion.AppfusionApp;
+import com.appfusion.AppFusionApp;
 import com.appfusion.domain.SocialUserConnection;
 
 import org.junit.Before;

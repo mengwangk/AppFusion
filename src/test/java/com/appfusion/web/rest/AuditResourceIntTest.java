@@ -1,6 +1,6 @@
 package com.appfusion.web.rest;
 
-import com.appfusion.AppfusionApp;
+import com.appfusion.AppFusionApp;
 import com.appfusion.config.audit.AuditEventConverter;
 import com.appfusion.domain.PersistentAuditEvent;
 import com.appfusion.repository.PersistenceAuditEventRepository;

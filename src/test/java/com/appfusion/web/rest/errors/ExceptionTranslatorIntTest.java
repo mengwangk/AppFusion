@@ -1,6 +1,6 @@
 package com.appfusion.web.rest.errors;
 
-import com.appfusion.AppfusionApp;
+import com.appfusion.AppFusionApp;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
