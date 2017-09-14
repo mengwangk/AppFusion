@@ -18,7 +18,7 @@
     "prodDatabaseType": "mysql",
     "searchEngine": "elasticsearch",
     "messageBroker": false,
-    "serviceDiscoveryType": "eureka",
+    "serviceDiscoveryType": "false",
     "buildTool": "gradle",
     "enableSocialSignIn": true,
     "enableSwaggerCodegen": false,
