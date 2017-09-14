@@ -9,7 +9,11 @@ const utils = require('./utils.js');
 module.exports = (options) => {
     const DATAS = {
         VERSION: `'${utils.parseVersion()}'`,
-        DEBUG_INFO_ENABLED: options.env === 'development'
+        DEBUG_INFO_ENABLED: options.env === 'development',
+        // The root URL for API calls, ending with a '/' - for example: `"http://api.jhipster.tech:8081/"`
+        // In `prod` mode, you will need to enable CORS on your API server
+        // (see the `jhipster.cors` common JHipster property in the `application-*.yml` configurations)
+        SERVER_API_URL: `"/"`
     };
     return {
         resolve: {
@@ -101,7 +105,8 @@ module.exports = (options) => {
                 output: {
                     groupBy: [
                         { pattern: "./src/main/webapp/i18n/en/*.json", fileName: "./i18n/en.json" },
-                        { pattern: "./src/main/webapp/i18n/zh-cn/*.json", fileName: "./i18n/zh-cn.json" }
+                        { pattern: "./src/main/webapp/i18n/zh-cn/*.json", fileName: "./i18n/zh-cn.json" },
+                        { pattern: "./src/main/webapp/i18n/zh-tw/*.json", fileName: "./i18n/zh-tw.json" }
                         // jhipster-needle-i18n-language-webpack - JHipster will add/remove languages in this array
                     ]
                 }

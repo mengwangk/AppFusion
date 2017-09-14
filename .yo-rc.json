@@ -4,8 +4,8 @@
       "packageName": "com.appfusion",
       "nativeLanguage": "en"
     },
-    "jhipsterVersion": "4.7.0",
-    "baseName": "AppFusion",
+    "jhipsterVersion": "4.8.1",
+    "baseName": "appfusion",
     "packageName": "com.appfusion",
     "packageFolder": "com/appfusion",
     "serverPort": "8080",
@@ -18,25 +18,23 @@
     "prodDatabaseType": "mysql",
     "searchEngine": "elasticsearch",
     "messageBroker": false,
-    "serviceDiscoveryType": "false",
+    "serviceDiscoveryType": false,
     "buildTool": "gradle",
     "enableSocialSignIn": true,
     "enableSwaggerCodegen": false,
-    "jwtSecretKey": "9424e7b8d9b719d8bb3fb06f84465e6994c7ee94",
+    "jwtSecretKey": "7e63a49b755b2f890bdaf7575e958bd5461b8e36",
     "clientFramework": "angularX",
     "useSass": false,
     "clientPackageManager": "yarn",
     "applicationType": "monolith",
-    "testFrameworks": [
-      "gatling",
-      "protractor"
-    ],
+    "testFrameworks": [],
     "jhiPrefix": "jhi",
     "enableTranslation": true,
     "nativeLanguage": "en",
     "languages": [
       "en",
-      "zh-cn"
+      "zh-cn",
+      "zh-tw"
     ],
     "herokuAppName": "appfusion"
   }

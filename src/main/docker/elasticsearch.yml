@@ -3,7 +3,7 @@ services:
     appfusion-elasticsearch:
         image: elasticsearch:2.4.1
         # volumes:
-        #     - ~/volumes/jhipster/AppFusion/elasticsearch/:/usr/share/elasticsearch/data/
+        #     - ~/volumes/jhipster/appfusion/elasticsearch/:/usr/share/elasticsearch/data/
         ports:
             - 9200:9200
             - 9300:9300

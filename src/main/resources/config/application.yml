@@ -4,8 +4,8 @@
 # This configuration will be overridden by the Spring profile you use,
 # for example application-dev.yml if you use the "dev" profile.
 #
-# More information on profiles: https://jhipster.github.io/profiles/
-# More information on configuration properties: https://jhipster.github.io/common-application-properties/
+# More information on profiles: http://www.jhipster.tech/profiles/
+# More information on configuration properties: http://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
 # ===================================================================
@@ -23,7 +23,7 @@ management:
             enabled: false # When using the MailService, configure an SMTP server and set this to true
 spring:
     application:
-        name: AppFusion
+        name: appfusion
     profiles:
         # The commented value for `active` can be replaced with valid Spring profiles to load.
         # Otherwise, it will be filled in by gradle when building the WAR file
@@ -79,7 +79,7 @@ info:
 # ===================================================================
 # JHipster specific properties
 #
-# Full reference is available at: https://jhipster.github.io/common-application-properties/
+# Full reference is available at: http://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
 jhipster:
@@ -96,11 +96,11 @@ jhipster:
         #allow-credentials: true
         #max-age: 1800
     mail:
-        from: AppFusion@localhost
+        from: appfusion@localhost
     swagger:
         default-include-pattern: /api/.*
-        title: AppFusion API
-        description: AppFusion API documentation
+        title: appfusion API
+        description: appfusion API documentation
         version: 0.0.1
         terms-of-service-url:
         contact-name:
@@ -119,7 +119,7 @@ jhipster:
 # to have type-safe configuration, like in the JHipsterProperties above
 #
 # More documentation is available at:
-# https://jhipster.github.io/common-application-properties/
+# http://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
 application:

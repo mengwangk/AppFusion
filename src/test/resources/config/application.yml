@@ -3,8 +3,8 @@
 #
 # This configuration is used for unit/integration tests.
 #
-# More information on profiles: https://jhipster.github.io/profiles/
-# More information on configuration properties: https://jhipster.github.io/common-application-properties/
+# More information on profiles: http://www.jhipster.tech/profiles/
+# More information on configuration properties: http://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
 # ===================================================================
@@ -16,14 +16,14 @@
 
 spring:
     application:
-        name: AppFusion
+        name: appfusion
     jackson:
         serialization.write_dates_as_timestamps: false
     cache:
         type: none
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:mem:AppFusion;DB_CLOSE_DELAY=-1
+        url: jdbc:h2:mem:appfusion;DB_CLOSE_DELAY=-1
         name:
         username:
         password:
@@ -79,7 +79,7 @@ info:
 # ===================================================================
 # JHipster specific properties
 #
-# Full reference is available at: https://jhipster.github.io/common-application-properties/
+# Full reference is available at: http://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
 jhipster:
@@ -100,7 +100,7 @@ jhipster:
     security:
         authentication:
             jwt:
-                secret: 9424e7b8d9b719d8bb3fb06f84465e6994c7ee94
+                secret: 7e63a49b755b2f890bdaf7575e958bd5461b8e36
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
@@ -115,7 +115,7 @@ jhipster:
 # to have type-safe configuration, like in the JHipsterProperties above
 #
 # More documentation is available at:
-# https://jhipster.github.io/common-application-properties/
+# http://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
 application:

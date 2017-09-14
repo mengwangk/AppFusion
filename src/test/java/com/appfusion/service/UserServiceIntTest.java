@@ -1,6 +1,6 @@
 package com.appfusion.service;
 
-import com.appfusion.AppFusionApp;
+import com.appfusion.AppfusionApp;
 import com.appfusion.domain.User;
 import com.appfusion.config.Constants;
 import com.appfusion.repository.UserRepository;
@@ -29,7 +29,7 @@ import static org.assertj.core.api.Assertions.*;
  * @see UserService
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = AppFusionApp.class)
+@SpringBootTest(classes = AppfusionApp.class)
 @Transactional
 public class UserServiceIntTest {
 

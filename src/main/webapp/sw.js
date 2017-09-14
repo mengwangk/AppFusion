@@ -1,5 +1,5 @@
-var dataCacheName = 'AppFusion-v1';
-var cacheName = 'AppFusion-1';
+var dataCacheName = 'Appfusion-v1';
+var cacheName = 'Appfusion-1';
 var filesToCache = [
     '/',
     '/index.html'

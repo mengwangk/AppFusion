@@ -1,6 +1,6 @@
 package com.appfusion.web.rest;
 
-import com.appfusion.AppFusionApp;
+import com.appfusion.AppfusionApp;
 import com.appfusion.domain.Authority;
 import com.appfusion.domain.User;
 import com.appfusion.repository.UserRepository;
@@ -49,7 +49,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see UserResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = AppFusionApp.class)
+@SpringBootTest(classes = AppfusionApp.class)
 public class UserResourceIntTest {
 
     private static final Long DEFAULT_ID = 1L;

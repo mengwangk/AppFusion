@@ -1,6 +1,6 @@
 package com.appfusion.repository;
 
-import com.appfusion.AppFusionApp;
+import com.appfusion.AppfusionApp;
 import com.appfusion.config.Constants;
 import com.appfusion.config.audit.AuditEventConverter;
 import com.appfusion.domain.PersistentAuditEvent;
@@ -31,7 +31,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @see CustomAuditEventRepository
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = AppFusionApp.class)
+@SpringBootTest(classes = AppfusionApp.class)
 @Transactional
 public class CustomAuditEventRepositoryIntTest {
 

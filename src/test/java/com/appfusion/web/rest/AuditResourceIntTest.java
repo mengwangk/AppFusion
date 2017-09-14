@@ -1,6 +1,6 @@
 package com.appfusion.web.rest;
 
-import com.appfusion.AppFusionApp;
+import com.appfusion.AppfusionApp;
 import com.appfusion.config.audit.AuditEventConverter;
 import com.appfusion.domain.PersistentAuditEvent;
 import com.appfusion.repository.PersistenceAuditEventRepository;
@@ -33,7 +33,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see AuditResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = AppFusionApp.class)
+@SpringBootTest(classes = AppfusionApp.class)
 @Transactional
 public class AuditResourceIntTest {
 

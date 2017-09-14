@@ -1,6 +1,6 @@
 package com.appfusion.service;
 
-import com.appfusion.AppFusionApp;
+import com.appfusion.AppfusionApp;
 import com.appfusion.domain.Authority;
 import com.appfusion.domain.User;
 import com.appfusion.repository.AuthorityRepository;
@@ -28,7 +28,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = AppFusionApp.class)
+@SpringBootTest(classes = AppfusionApp.class)
 @Transactional
 public class SocialServiceIntTest {
 

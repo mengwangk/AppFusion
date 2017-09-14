@@ -1,6 +1,6 @@
 package com.appfusion.web.rest;
 
-import com.appfusion.AppFusionApp;
+import com.appfusion.AppfusionApp;
 import com.appfusion.domain.User;
 import com.appfusion.repository.UserRepository;
 import com.appfusion.security.jwt.TokenProvider;
@@ -27,7 +27,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see UserJWTController
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = AppFusionApp.class)
+@SpringBootTest(classes = AppfusionApp.class)
 public class UserJWTControllerIntTest {
 
     @Autowired

@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { AppFusionSharedModule } from '../shared';
+import { AppfusionSharedModule } from '../shared';
 
 import {
     Register,
@@ -23,7 +23,7 @@ import {
 
 @NgModule({
     imports: [
-        AppFusionSharedModule,
+        AppfusionSharedModule,
         RouterModule.forRoot(accountState, { useHash: true })
     ],
     declarations: [
@@ -46,4 +46,4 @@ import {
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppFusionAccountModule {}
+export class AppfusionAccountModule {}

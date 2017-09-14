@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 # AppFusion
-This application was generated using JHipster 4.7.0, you can find documentation and help at [https://jhipster.github.io/documentation-archive/v4.7.0](https://jhipster.github.io/documentation-archive/v4.7.0).
+=======
+# appfusion
+This application was generated using JHipster 4.8.1, you can find documentation and help at [http://www.jhipster.tech/documentation-archive/v4.8.1](http://www.jhipster.tech/documentation-archive/v4.8.1).
+>>>>>>> jhipster_upgrade
 
-## Development
+Testing JHipster Java application framework.
 
-Before you can build this project, you must install and configure the following dependencies on your machine:
 
+<<<<<<< HEAD
+Check out [https://appfusion.herokuapp.com/](https://appfusion.herokuapp.com/) to see it in action.
+=======
 1. [Node.js][]: We use Node to run a development web server and build the project.
    Depending on your system, you can install Node either from source or as a pre-packaged bundle.
 2. [Yarn][]: We use Yarn to manage Node dependencies.
@@ -90,9 +96,10 @@ will generate few files:
     create src/main/webapp/app/my-component/my-component.component.ts
     update src/main/webapp/app/app.module.ts
 
+
 ## Building for production
 
-To optimize the AppFusion application for production, run:
+To optimize the appfusion application for production, run:
 
     ./gradlew -Pprod clean bootRepackage
 
@@ -117,13 +124,7 @@ Unit tests are run by [Karma][] and written with [Jasmine][]. They're located in
 
     yarn test
 
-UI end-to-end tests are powered by [Protractor][], which is built on top of WebDriverJS. They're located in [src/test/javascript/e2e](src/test/javascript/e2e)
-and can be run by starting Spring Boot in one terminal (`./gradlew bootRun`) and running the tests (`yarn run e2e`) in a second one.
-### Other tests
 
-Performance tests are run by [Gatling][] and written in Scala. They're located in [src/test/gatling](src/test/gatling) and can be run with:
-
-    ./gradlew gatlingRun
 
 For more information, refer to the [Running tests page][].
 
@@ -153,17 +154,16 @@ For more information refer to [Using Docker and Docker-Compose][], this page als
 
 To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`), this will let you generate configuration files for a number of Continuous Integration systems. Consult the [Setting up Continuous Integration][] page for more information.
 
-[JHipster Homepage and latest documentation]: https://jhipster.github.io
-[JHipster 4.7.0 archive]: https://jhipster.github.io/documentation-archive/v4.7.0
+[JHipster Homepage and latest documentation]: http://www.jhipster.tech
+[JHipster 4.8.1 archive]: http://www.jhipster.tech/documentation-archive/v4.8.1
 
-[Using JHipster in development]: https://jhipster.github.io/documentation-archive/v4.7.0/development/
-[Service Discovery and Configuration with the JHipster-Registry]: https://jhipster.github.io/documentation-archive/v4.7.0/microservices-architecture/#jhipster-registry
-[Using Docker and Docker-Compose]: https://jhipster.github.io/documentation-archive/v4.7.0/docker-compose
-[Using JHipster in production]: https://jhipster.github.io/documentation-archive/v4.7.0/production/
-[Running tests page]: https://jhipster.github.io/documentation-archive/v4.7.0/running-tests/
-[Setting up Continuous Integration]: https://jhipster.github.io/documentation-archive/v4.7.0/setting-up-ci/
+[Using JHipster in development]: http://www.jhipster.tech/documentation-archive/v4.8.1/development/
+[Using Docker and Docker-Compose]: http://www.jhipster.tech/documentation-archive/v4.8.1/docker-compose
+[Using JHipster in production]: http://www.jhipster.tech/documentation-archive/v4.8.1/production/
+[Running tests page]: http://www.jhipster.tech/documentation-archive/v4.8.1/running-tests/
+[Setting up Continuous Integration]: http://www.jhipster.tech/documentation-archive/v4.8.1/setting-up-ci/
 
-[Gatling]: http://gatling.io/
+
 [Node.js]: https://nodejs.org/
 [Yarn]: https://yarnpkg.org/
 [Webpack]: https://webpack.github.io/
@@ -174,3 +174,4 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [Protractor]: https://angular.github.io/protractor/
 [Leaflet]: http://leafletjs.com/
 [DefinitelyTyped]: http://definitelytyped.org/
+>>>>>>> jhipster_upgrade

@@ -1,9 +1,9 @@
 version: '2'
 services:
     appfusion-mysql:
-        image: mysql:5.7.18
+        image: mysql:5.7.19
         # volumes:
-        #     - ~/volumes/jhipster/AppFusion/mysql/:/var/lib/mysql/
+        #     - ~/volumes/jhipster/appfusion/mysql/:/var/lib/mysql/
         environment:
             - MYSQL_USER=root
             - MYSQL_ALLOW_EMPTY_PASSWORD=yes

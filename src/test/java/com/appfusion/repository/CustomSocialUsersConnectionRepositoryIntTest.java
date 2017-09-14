@@ -1,6 +1,6 @@
 package com.appfusion.repository;
 
-import com.appfusion.AppFusionApp;
+import com.appfusion.AppfusionApp;
 import com.appfusion.domain.SocialUserConnection;
 
 import org.junit.Before;
@@ -30,7 +30,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = AppFusionApp.class)
+@SpringBootTest(classes = AppfusionApp.class)
 @Transactional
 public class CustomSocialUsersConnectionRepositoryIntTest {
 

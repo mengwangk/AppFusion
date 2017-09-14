@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { Observable } from 'rxjs/Rx';
 import { JhiLanguageHelper } from '../../../../../../main/webapp/app/shared';
-import { AppFusionTestModule } from '../../../test.module';
+import { AppfusionTestModule } from '../../../test.module';
 import { Principal, AccountService } from '../../../../../../main/webapp/app/shared';
 import { SettingsComponent } from '../../../../../../main/webapp/app/account/settings/settings.component';
 import { MockAccountService } from '../../../helpers/mock-account.service';
@@ -18,7 +18,7 @@ describe('Component Tests', () => {
 
         beforeEach(async(() => {
             TestBed.configureTestingModule({
-                imports: [AppFusionTestModule],
+                imports: [AppfusionTestModule],
                 declarations: [SettingsComponent],
                 providers: [
                     {
