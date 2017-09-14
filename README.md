@@ -3,4 +3,4 @@
 Testing JHipster Java application framework.
 
 
-Check out [https://app-fusion.herokuapp.com/](https://app-fusion.herokuapp.com/) to see it in action.
+Check out [https://appfusion.herokuapp.com/](https://appfusion.herokuapp.com/) to see it in action.
