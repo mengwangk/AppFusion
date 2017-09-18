@@ -13,4 +13,4 @@ Check out [https://appfusion.herokuapp.com/](https://appfusion.herokuapp.com/) t
 
 
 ## Note
-This application is developed using JHipster to experiment AWS features for AWS Solution Architect certification. 
+This application is developed using JHipster to experiment AWS features for my AWS Solution Architect certification. 
