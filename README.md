@@ -1,6 +1,6 @@
 # AppFusion
 
-A Java web application developed primarily to test out AWS.
+A Java web application developed primarily to test out AWS, machine learning and other cloud computing platforms.
 
 
 ## Heroku Hosting
