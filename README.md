@@ -9,8 +9,8 @@ Check out [https://appfusion.herokuapp.com/](https://appfusion.herokuapp.com/) t
 ## AWS Hosting
 
 ### Architecture
-(https://raw.githubusercontent.com/mengwangk/appfusion/master/design/architecture_1.jpg)
+![Architecture](https://raw.githubusercontent.com/mengwangk/appfusion/master/design/architecture_1.jpg)
 
 
 ## Note
-This application is developed using JHipster to experiment AWS features for AWS Solution Architect certification.
+This application is developed using JHipster to experiment AWS features for AWS Solution Architect certification. 
