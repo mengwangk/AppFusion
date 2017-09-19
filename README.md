@@ -4,7 +4,7 @@ A Java web application developed primarily to test out AWS, machine learning and
 
 
 ## Heroku Hosting
-Check out [https://appfusion.herokuapp.com/](https://appfusion.herokuapp.com/) to see it in action.
+Check out [https://appfusion.herokuapp.com/](https://appfusion.herokuapp.com/) to see it in action. Using free dynos so the app may take awhile to start up.
 
 ## AWS Hosting
 
