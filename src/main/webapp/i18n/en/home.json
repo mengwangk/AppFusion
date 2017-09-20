@@ -1,7 +1,7 @@
 {
     "home": {
-        "title": "Welcome, Java Hipster!",
-        "subtitle": "This is your homepage",
+        "title": "AppFusion - Cloud Vision",
+        "subtitle": "Welcome to AppFusion!",
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."
         },
