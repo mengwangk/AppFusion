@@ -1,6 +1,7 @@
 import { Injectable, Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { DatePipe } from '@angular/common';
 import { UrlHistory } from './url-history.model';
 import { UrlHistoryService } from './url-history.service';
 
@@ -9,6 +10,7 @@ export class UrlHistoryPopupService {
     private ngbModalRef: NgbModalRef;
 
     constructor(
+        private datePipe: DatePipe,
         private modalService: NgbModal,
         private router: Router,
         private urlHistoryService: UrlHistoryService
@@ -26,6 +28,8 @@ export class UrlHistoryPopupService {
 
             if (id) {
                 this.urlHistoryService.find(id).subscribe((urlHistory) => {
+                    urlHistory.dateCreated = this.datePipe
+                        .transform(urlHistory.dateCreated, 'yyyy-MM-ddTHH:mm:ss');
                     this.ngbModalRef = this.urlHistoryModalRef(component, urlHistory);
                     resolve(this.ngbModalRef);
                 });

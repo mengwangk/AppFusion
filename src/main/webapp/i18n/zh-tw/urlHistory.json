@@ -17,6 +17,7 @@
                 "title": "Url History"
             },
             "url": "Url",
+            "dateCreated": "Date Created",
             "user": "User"
         }
     }

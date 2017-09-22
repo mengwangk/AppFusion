@@ -8,6 +8,10 @@
         <dd>
             <span>{{urlHistory.url}}</span>
         </dd>
+        <dt><span jhiTranslate="appfusionApp.urlHistory.dateCreated">Date Created</span></dt>
+        <dd>
+            <span>{{urlHistory.dateCreated | date:'medium'}}</span>
+        </dd>
         <dt><span jhiTranslate="appfusionApp.urlHistory.user">User</span></dt>
         <dd>
             {{urlHistory.user?.login}}

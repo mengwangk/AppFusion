@@ -1,5 +1,6 @@
 entity UrlHistory {
-	url String required
+	url String required,
+    dateCreated ZonedDateTime required
 }
 
 relationship ManyToOne {

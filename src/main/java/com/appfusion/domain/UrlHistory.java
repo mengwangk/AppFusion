@@ -7,6 +7,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.io.Serializable;
+import java.time.ZonedDateTime;
 import java.util.Objects;
 
 /**
@@ -27,6 +28,10 @@ public class UrlHistory implements Serializable {
     @NotNull
     @Column(name = "url", nullable = false)
     private String url;
+
+    @NotNull
+    @Column(name = "date_created", nullable = false)
+    private ZonedDateTime dateCreated;
 
     @ManyToOne
     private User user;
@@ -51,6 +56,19 @@ public class UrlHistory implements Serializable {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public ZonedDateTime getDateCreated() {
+        return dateCreated;
+    }
+
+    public UrlHistory dateCreated(ZonedDateTime dateCreated) {
+        this.dateCreated = dateCreated;
+        return this;
+    }
+
+    public void setDateCreated(ZonedDateTime dateCreated) {
+        this.dateCreated = dateCreated;
     }
 
     public User getUser() {
@@ -92,6 +110,7 @@ public class UrlHistory implements Serializable {
         return "UrlHistory{" +
             "id=" + getId() +
             ", url='" + getUrl() + "'" +
+            ", dateCreated='" + getDateCreated() + "'" +
             "}";
     }
 }

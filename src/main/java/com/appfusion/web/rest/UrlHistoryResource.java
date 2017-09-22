@@ -5,6 +5,7 @@ import com.appfusion.domain.UrlHistory;
 
 import com.appfusion.repository.UrlHistoryRepository;
 import com.appfusion.repository.search.UrlHistorySearchRepository;
+import com.appfusion.security.SecurityUtils;
 import com.appfusion.web.rest.util.HeaderUtil;
 import com.appfusion.web.rest.util.PaginationUtil;
 import io.swagger.annotations.ApiParam;
@@ -103,16 +104,12 @@ public class UrlHistoryResource {
     @Timed
     public ResponseEntity<List<UrlHistory>> getAllUrlHistories(@ApiParam Pageable pageable) {
         log.debug("REST request to get a page of UrlHistories");
+
+        //Page<UrlHistory> page = urlHistoryRepository.findAll(pageable);
+        Page<UrlHistory> page = urlHistoryRepository.findByUserLoginOrderByDateCreatedDesc(SecurityUtils.getCurrentUserLogin(), pageable);
         
-        Page<UrlHistory> page = urlHistoryRepository.findAll(pageable);      
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/url-histories");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
-        
-        /*
-        List<UrlHistory> urlHistories = urlHistoryRepository.findByUserIsCurrentUser();
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/url-histories");
-        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
-        */
     }
 
     /**

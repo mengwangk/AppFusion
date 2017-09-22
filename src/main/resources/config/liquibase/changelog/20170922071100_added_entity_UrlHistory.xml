@@ -26,12 +26,17 @@
                 <constraints nullable="false" />
             </column>
 
+            <column name="date_created" type="timestamp">
+                <constraints nullable="false" />
+            </column>
+
             <column name="user_id" type="bigint">
                 <constraints nullable="true" />
             </column>
 
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
         </createTable>
+        <dropDefaultValue tableName="url_history" columnName="date_created" columnDataType="datetime"/>
         
     </changeSet>
     <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->

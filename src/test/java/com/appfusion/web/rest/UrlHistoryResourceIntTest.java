@@ -22,8 +22,13 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
+import java.time.Instant;
+import java.time.ZonedDateTime;
+import java.time.ZoneOffset;
+import java.time.ZoneId;
 import java.util.List;
 
+import static com.appfusion.web.rest.TestUtil.sameInstant;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -40,6 +45,9 @@ public class UrlHistoryResourceIntTest {
 
     private static final String DEFAULT_URL = "AAAAAAAAAA";
     private static final String UPDATED_URL = "BBBBBBBBBB";
+
+    private static final ZonedDateTime DEFAULT_DATE_CREATED = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
+    private static final ZonedDateTime UPDATED_DATE_CREATED = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
 
     @Autowired
     private UrlHistoryRepository urlHistoryRepository;
@@ -81,7 +89,8 @@ public class UrlHistoryResourceIntTest {
      */
     public static UrlHistory createEntity(EntityManager em) {
         UrlHistory urlHistory = new UrlHistory()
-            .url(DEFAULT_URL);
+            .url(DEFAULT_URL)
+            .dateCreated(DEFAULT_DATE_CREATED);
         return urlHistory;
     }
 
@@ -107,6 +116,7 @@ public class UrlHistoryResourceIntTest {
         assertThat(urlHistoryList).hasSize(databaseSizeBeforeCreate + 1);
         UrlHistory testUrlHistory = urlHistoryList.get(urlHistoryList.size() - 1);
         assertThat(testUrlHistory.getUrl()).isEqualTo(DEFAULT_URL);
+        assertThat(testUrlHistory.getDateCreated()).isEqualTo(DEFAULT_DATE_CREATED);
 
         // Validate the UrlHistory in Elasticsearch
         UrlHistory urlHistoryEs = urlHistorySearchRepository.findOne(testUrlHistory.getId());
@@ -152,6 +162,24 @@ public class UrlHistoryResourceIntTest {
 
     @Test
     @Transactional
+    public void checkDateCreatedIsRequired() throws Exception {
+        int databaseSizeBeforeTest = urlHistoryRepository.findAll().size();
+        // set the field null
+        urlHistory.setDateCreated(null);
+
+        // Create the UrlHistory, which fails.
+
+        restUrlHistoryMockMvc.perform(post("/api/url-histories")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(urlHistory)))
+            .andExpect(status().isBadRequest());
+
+        List<UrlHistory> urlHistoryList = urlHistoryRepository.findAll();
+        assertThat(urlHistoryList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     public void getAllUrlHistories() throws Exception {
         // Initialize the database
         urlHistoryRepository.saveAndFlush(urlHistory);
@@ -161,7 +189,8 @@ public class UrlHistoryResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(urlHistory.getId().intValue())))
-            .andExpect(jsonPath("$.[*].url").value(hasItem(DEFAULT_URL.toString())));
+            .andExpect(jsonPath("$.[*].url").value(hasItem(DEFAULT_URL.toString())))
+            .andExpect(jsonPath("$.[*].dateCreated").value(hasItem(sameInstant(DEFAULT_DATE_CREATED))));
     }
 
     @Test
@@ -175,7 +204,8 @@ public class UrlHistoryResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(urlHistory.getId().intValue()))
-            .andExpect(jsonPath("$.url").value(DEFAULT_URL.toString()));
+            .andExpect(jsonPath("$.url").value(DEFAULT_URL.toString()))
+            .andExpect(jsonPath("$.dateCreated").value(sameInstant(DEFAULT_DATE_CREATED)));
     }
 
     @Test
@@ -197,7 +227,8 @@ public class UrlHistoryResourceIntTest {
         // Update the urlHistory
         UrlHistory updatedUrlHistory = urlHistoryRepository.findOne(urlHistory.getId());
         updatedUrlHistory
-            .url(UPDATED_URL);
+            .url(UPDATED_URL)
+            .dateCreated(UPDATED_DATE_CREATED);
 
         restUrlHistoryMockMvc.perform(put("/api/url-histories")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -209,6 +240,7 @@ public class UrlHistoryResourceIntTest {
         assertThat(urlHistoryList).hasSize(databaseSizeBeforeUpdate);
         UrlHistory testUrlHistory = urlHistoryList.get(urlHistoryList.size() - 1);
         assertThat(testUrlHistory.getUrl()).isEqualTo(UPDATED_URL);
+        assertThat(testUrlHistory.getDateCreated()).isEqualTo(UPDATED_DATE_CREATED);
 
         // Validate the UrlHistory in Elasticsearch
         UrlHistory urlHistoryEs = urlHistorySearchRepository.findOne(testUrlHistory.getId());
@@ -267,7 +299,8 @@ public class UrlHistoryResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(urlHistory.getId().intValue())))
-            .andExpect(jsonPath("$.[*].url").value(hasItem(DEFAULT_URL.toString())));
+            .andExpect(jsonPath("$.[*].url").value(hasItem(DEFAULT_URL.toString())))
+            .andExpect(jsonPath("$.[*].dateCreated").value(hasItem(sameInstant(DEFAULT_DATE_CREATED))));
     }
 
     @Test

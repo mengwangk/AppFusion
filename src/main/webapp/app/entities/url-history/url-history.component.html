@@ -31,6 +31,7 @@
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="url"><span jhiTranslate="appfusionApp.urlHistory.url">Url</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="dateCreated"><span jhiTranslate="appfusionApp.urlHistory.dateCreated">Date Created</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="user.login"><span jhiTranslate="appfusionApp.urlHistory.user">User</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
@@ -39,6 +40,7 @@
             <tr *ngFor="let urlHistory of urlHistories ;trackBy: trackId">
                 <td><a [routerLink]="['../url-history', urlHistory.id ]">{{urlHistory.id}}</a></td>
                 <td>{{urlHistory.url}}</td>
+                <td>{{urlHistory.dateCreated | date:'medium'}}</td>
                 <td>
                     {{urlHistory.user?.login}}
                 </td>
