@@ -1,0 +1,29 @@
+
+<div *ngIf="urlHistory">
+    <h2><span jhiTranslate="appfusionApp.urlHistory.detail.title">Url History</span> {{urlHistory.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="appfusionApp.urlHistory.url">Url</span></dt>
+        <dd>
+            <span>{{urlHistory.url}}</span>
+        </dd>
+        <dt><span jhiTranslate="appfusionApp.urlHistory.user">User</span></dt>
+        <dd>
+            {{urlHistory.user?.login}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'url-history/'+ urlHistory.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,23 @@
+{
+    "appfusionApp": {
+        "urlHistory" : {
+            "home": {
+                "title": "Url Histories",
+                "createLabel": "Create a new Url History",
+                "createOrEditLabel": "Create or edit a Url History",
+                "search": "Search for Url History"
+            },
+            "created": "A new Url History is created with identifier {{ param }}",
+            "updated": "A Url History is updated with identifier {{ param }}",
+            "deleted": "A Url History is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Url History {{ id }}?"
+            },
+            "detail": {
+                "title": "Url History"
+            },
+            "url": "Url",
+            "user": "User"
+        }
+    }
+}
