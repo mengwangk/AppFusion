@@ -27,4 +27,23 @@
         </div>
 
     </div>
+    
+    <div class="col-md-12">
+    
+     <div class="col-md-3">
+ 
+            <h2>Cloud Vision</h2>
+ 
+            <div ng2FileDrop
+                 [ngClass]="{'nv-file-over': hasFileDropZoneOver}"
+                 (fileOver)="fileOverBase($event)"
+                 [uploader]="uploader"
+                 class="well file-drop-zone">
+                Drag image file here or <br/>
+                Browse from your computer
+            </div>
+          
+        </div>
+        
+    </div>
 </div>

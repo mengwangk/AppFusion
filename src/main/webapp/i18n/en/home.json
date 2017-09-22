@@ -1,6 +1,6 @@
 {
     "home": {
-        "title": "AppFusion - Cloud Vision",
+        "title": "AppFusion - Welcome",
         "subtitle": "Welcome to AppFusion!",
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."

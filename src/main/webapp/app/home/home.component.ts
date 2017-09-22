@@ -1,48 +1,60 @@
-import { Component, OnInit } from '@angular/core';
-import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { JhiEventManager } from 'ng-jhipster';
+import {Component, OnInit} from '@angular/core';
+import {NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
+import {JhiEventManager} from 'ng-jhipster';
 
-import { Account, LoginModalService, Principal } from '../shared';
+import {Account, LoginModalService, Principal} from '../shared';
+
+import {FileUploader} from 'ng2-file-upload';
+
+const UPLOAD_URL = 'https://www.appfusion.ml/api/';
 
 @Component({
-    selector: 'jhi-home',
-    templateUrl: './home.component.html',
-    styleUrls: [
-        'home.css'
-    ]
+  selector: 'jhi-home',
+  templateUrl: './home.component.html',
+  styleUrls: [
+    'home.css'
+  ]
 
 })
 export class HomeComponent implements OnInit {
-    account: Account;
-    modalRef: NgbModalRef;
+  account: Account;
+  modalRef: NgbModalRef;
 
-    constructor(
-        private principal: Principal,
-        private loginModalService: LoginModalService,
-        private eventManager: JhiEventManager
-    ) {
-    }
+  public uploader: FileUploader = new FileUploader({url: UPLOAD_URL});
+  public hasFileDropZoneOver = false;
 
-    ngOnInit() {
-        this.principal.identity().then((account) => {
-            this.account = account;
-        });
-        this.registerAuthenticationSuccess();
-    }
+  constructor(
+    private principal: Principal,
+    private loginModalService: LoginModalService,
+    private eventManager: JhiEventManager
+  ) {
+  }
 
-    registerAuthenticationSuccess() {
-        this.eventManager.subscribe('authenticationSuccess', (message) => {
-            this.principal.identity().then((account) => {
-                this.account = account;
-            });
-        });
-    }
+  ngOnInit() {
+    this.principal.identity().then((account) => {
+      this.account = account;
+    });
+    this.registerAuthenticationSuccess();
+  }
 
-    isAuthenticated() {
-        return this.principal.isAuthenticated();
-    }
+  registerAuthenticationSuccess() {
+    this.eventManager.subscribe('authenticationSuccess', (message) => {
+      this.principal.identity().then((account) => {
+        this.account = account;
+      });
+    });
+  }
 
-    login() {
-        this.modalRef = this.loginModalService.open();
-    }
+  isAuthenticated() {
+    return this.principal.isAuthenticated();
+  }
+
+  login() {
+    this.modalRef = this.loginModalService.open();
+  }
+
+  public fileOverBase(e: any): void {
+    this.hasFileDropZoneOver = e;
+  }
+
 }

@@ -24,3 +24,28 @@ only screen and (                min-resolution: 2dppx) {
     }
 }
 
+ .file-drop-zone { 
+ 	border: dotted 3px lightgray; 
+ 	width:80%;
+ 	height:80%
+ }
+ 
+ .nv-file-over { 
+ 	border: dotted 3px red; 
+ } /* Default class applied to drop zones on over */
+ 
+
+#clickable.vs-app {
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+vs-app, vs-app *.vs-app {
+    box-sizing: border-box;
+}
