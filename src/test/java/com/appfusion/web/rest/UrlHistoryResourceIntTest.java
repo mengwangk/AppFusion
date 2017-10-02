@@ -1,7 +1,6 @@
 package com.appfusion.web.rest;
 
-import com.appfusion.AppfusionApp;
-
+import com.appfusion.AppFusionApp;
 import com.appfusion.domain.UrlHistory;
 import com.appfusion.repository.UrlHistoryRepository;
 import com.appfusion.repository.search.UrlHistorySearchRepository;
@@ -40,7 +39,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see UrlHistoryResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = AppfusionApp.class)
+@SpringBootTest(classes = AppFusionApp.class)
 public class UrlHistoryResourceIntTest {
 
     private static final String DEFAULT_URL = "AAAAAAAAAA";
