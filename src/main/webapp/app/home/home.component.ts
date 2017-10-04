@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   account: Account;
   modalRef: NgbModalRef;
 
-  public uploader: FileUploader = new FileUploader({url: UPLOAD_URL});
+  public uploader: FileUploader = new FileUploader({url: UPLOAD_URL, allowedMimeType: ['image/png', 'image/gif', 'image/jpeg']});
   public hasFileDropZoneOver = false;
 
   constructor(
@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit {
     this.modalRef = this.loginModalService.open();
   }
 
-  public fileOverBase(e: any): void {
+  public fileOver(e: any): void {
     this.hasFileDropZoneOver = e;
   }
 

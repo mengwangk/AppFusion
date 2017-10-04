@@ -27,12 +27,12 @@ only screen and (                min-resolution: 2dppx) {
  .file-drop-zone { 
  	border: dotted 3px lightgray; 
  	width:80%;
- 	height:80%
+ 	height:150px;
  }
  
- .nv-file-over { 
+ .file-over { 
  	border: dotted 3px red; 
- } /* Default class applied to drop zones on over */
+ } 
  
 
 #clickable.vs-app {
