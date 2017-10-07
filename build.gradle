@@ -209,6 +209,10 @@ dependencies {
         exclude group: 'com.vaadin.external.google', module: 'android-json'
     }
     //jhipster-needle-gradle-dependency - JHipster will add additional dependencies here
+    
+    
+    // AppFusion dependencies
+    compile 'com.google.cloud:google-cloud-vision:0.24.0-beta'
 }
 
 clean {
