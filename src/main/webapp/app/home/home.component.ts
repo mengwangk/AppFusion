@@ -2,11 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
 import {JhiEventManager} from 'ng-jhipster';
 
-import {Account, LoginModalService, Principal} from '../shared';
+import {Account, LoginModalService, Principal, CloudVisionService} from '../shared';
 
 import {FileUploader} from 'ng2-file-upload';
 
-const UPLOAD_URL = 'https://www.appfusion.ml/api/';
+const UPLOAD_URL = 'xx';
 
 @Component({
   selector: 'jhi-home',
@@ -26,7 +26,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private principal: Principal,
     private loginModalService: LoginModalService,
-    private eventManager: JhiEventManager
+    private eventManager: JhiEventManager,
+    private cloudVisionService: CloudVisionService
   ) {
   }
 
@@ -35,6 +36,7 @@ export class HomeComponent implements OnInit {
       this.account = account;
     });
     this.registerAuthenticationSuccess();
+    // console.log('upload url --' + UPLOAD_URL);
   }
 
   registerAuthenticationSuccess() {

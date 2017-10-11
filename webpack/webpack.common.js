@@ -6,6 +6,30 @@ const MergeJsonWebpackPlugin = require("merge-jsons-webpack-plugin");
 
 const utils = require('./utils.js');
 
+/*
+// Get available environment setting
+var environment = function () {
+  switch(process.env.NODE_ENV) {
+      case 'production':
+          return 'production';
+      case 'development':
+          return 'development';
+      default:                // in case ...
+          return 'development';
+  };
+};
+
+// Default map for supported all production/development/test settings
+var mapEnvToSettings = function (settings) {
+  return settings[environment()];
+};
+
+var UPLOAD_URL = {
+	production: JSON.stringify('http://localhost:9090'),
+	development: JSON.stringify('http://locahost:8080')
+};
+*/
+
 module.exports = (options) => {
     const DATAS = {
         VERSION: `'${utils.parseVersion()}'`,
