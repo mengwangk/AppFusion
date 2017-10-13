@@ -6,7 +6,7 @@ import {Account, LoginModalService, Principal, CloudVisionService} from '../shar
 
 import {FileUploader} from 'ng2-file-upload';
 
-const UPLOAD_URL = 'xx';
+const UPLOAD_URL = _UPLOAD_URL_;
 
 @Component({
   selector: 'jhi-home',
@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
       this.account = account;
     });
     this.registerAuthenticationSuccess();
-    // console.log('upload url --' + UPLOAD_URL);
+    console.log('upload url -- ' + UPLOAD_URL);
   }
 
   registerAuthenticationSuccess() {

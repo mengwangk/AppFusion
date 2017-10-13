@@ -10,6 +10,10 @@ const commonConfig = require('./webpack.common.js');
 
 const ENV = 'development';
 
+// https://github.com/AngularClass/angular-starter/wiki/How-to-pass-environment-variables%3F
+// https://www.bennadel.com/blog/3169-adding-custom-typings-files-d-ts-in-an-angular-2-typescript-application.htm
+const UPLOAD_URL = JSON.stringify('http://localhost:9000/api/vision');
+
 module.exports = webpackMerge(commonConfig({ env: ENV }), {
     devtool: 'eval-source-map',
     devServer: {
@@ -81,6 +85,9 @@ module.exports = webpackMerge(commonConfig({ env: ENV }), {
         new WebpackNotifierPlugin({
             title: 'AppFusion',
             contentImage: path.join(__dirname, 'logo-appfusion.png')
+        }),
+        new webpack.DefinePlugin({
+            '_UPLOAD_URL_': UPLOAD_URL
         })
     ]
 });

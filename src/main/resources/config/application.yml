@@ -62,6 +62,11 @@ spring:
             client-secret: xxx
 
         # jhipster-needle-add-social-configuration
+        
+    http:
+          multipart:
+              max-file-size: 2048KB 
+              max-request-size: 2048KB 
 
 security:
     basic:

@@ -4,6 +4,8 @@ const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 
 const utils = require('./utils.js');
 
+const UPLOAD_URL = JSON.stringify('http://localhost:9000/api/vision');
+
 module.exports = (WATCH) => ({
     resolve: {
         extensions: ['.ts', '.js']
@@ -56,6 +58,9 @@ module.exports = (WATCH) => ({
                     failOnHint: false
                 }
             }
+        }),
+        new webpack.DefinePlugin({
+            '_UPLOAD_URL_': UPLOAD_URL
         })
     ]
 });

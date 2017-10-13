@@ -12,6 +12,8 @@ const commonConfig = require('./webpack.common.js');
 const ENV = 'production';
 const extractCSS = new ExtractTextPlugin(`[name].[hash].css`);
 
+const UPLOAD_URL = JSON.stringify('http://appfusion.herokuapp.com');
+
 module.exports = webpackMerge(commonConfig({ env: ENV }), {
     // Enable source maps. Please note that this will slow down the build.
     // You have to enable it in UglifyJSPlugin config below and in tsconfig-aot.json as well
@@ -93,6 +95,9 @@ module.exports = webpackMerge(commonConfig({ env: ENV }), {
         new webpack.LoaderOptionsPlugin({
             minimize: true,
             debug: false
+        }),
+        new webpack.DefinePlugin({
+            '_UPLOAD_URL_': UPLOAD_URL
         })
     ]
 });
