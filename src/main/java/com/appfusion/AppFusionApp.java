@@ -2,6 +2,7 @@ package com.appfusion;
 
 import com.appfusion.config.ApplicationProperties;
 import com.appfusion.config.DefaultProfileUtil;
+import com.appfusion.config.StorageProperties;
 
 import io.github.jhipster.config.JHipsterConstants;
 
@@ -23,7 +24,7 @@ import java.util.Collection;
 
 @ComponentScan
 @EnableAutoConfiguration(exclude = {MetricFilterAutoConfiguration.class, MetricRepositoryAutoConfiguration.class})
-@EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
+@EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class, StorageProperties.class})
 public class AppFusionApp {
 
     private static final Logger log = LoggerFactory.getLogger(AppFusionApp.class);

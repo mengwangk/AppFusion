@@ -1,5 +1,11 @@
 package com.appfusion.web.rest.errors;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.dao.ConcurrencyFailureException;
 import org.springframework.http.ResponseEntity;
@@ -16,12 +22,6 @@ import org.zalando.problem.Status;
 import org.zalando.problem.spring.web.advice.HttpStatusAdapter;
 import org.zalando.problem.spring.web.advice.ProblemHandling;
 import org.zalando.problem.spring.web.advice.validation.ConstraintViolationProblem;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 /**
  * Controller advice to translate the server side exceptions to client-friendly json structures.
