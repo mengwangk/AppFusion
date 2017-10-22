@@ -12,7 +12,7 @@ const ENV = 'development';
 
 // https://github.com/AngularClass/angular-starter/wiki/How-to-pass-environment-variables%3F
 // https://www.bennadel.com/blog/3169-adding-custom-typings-files-d-ts-in-an-angular-2-typescript-application.htm
-const UPLOAD_URL = JSON.stringify('http://localhost:9000/api/vision');
+const UPLOAD_URL = JSON.stringify('http://localhost:9000/api/vision/multi');
 
 module.exports = webpackMerge(commonConfig({ env: ENV }), {
     devtool: 'eval-source-map',

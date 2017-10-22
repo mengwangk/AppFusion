@@ -20,7 +20,14 @@ plugins {
     id "net.ltgt.apt" version "0.11"
     id "io.spring.dependency-management" version "1.0.3.RELEASE"
     id "com.moowork.node" version "1.2.0"
+    id 'io.franzbecker.gradle-lombok' version '1.10'
+	id 'java'
     //jhipster-needle-gradle-plugins - JHipster will add additional gradle plugins here
+}
+
+lombok { // optional: values below are the defaults
+	version = "${lombok_version}"
+	sha256 = ""
 }
 
 apply plugin: 'java'
@@ -212,7 +219,9 @@ dependencies {
     
     
     // AppFusion dependencies
-    compile 'com.google.cloud:google-cloud-vision:0.24.0-beta'
+    compile 'com.google.cloud:google-cloud-vision:${cloud_vision_version}'
+    compileOnly 'org.projectlombok:lombok:${lombok_version}'
+   
 }
 
 clean {
