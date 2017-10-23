@@ -1,6 +1,7 @@
 #!/usr/bin/env groovy
 
-env.HEROKU_API_KEY = '268354a9-4e92-43b1-ae25-c1b0355177b4'
+env.HEROKU_API_KEY = 'XXXX'
+
 node {
     stage('checkout') {
         checkout scm
