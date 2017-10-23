@@ -27,7 +27,7 @@ plugins {
 
 lombok { // optional: values below are the defaults
 	version = "${lombok_version}"
-	sha256 = ""
+	sha256 = "3ca225ce3917eac8bf4b7d2186845df4e70dcdede356dca8537b6d78a535c91e"
 }
 
 sourceCompatibility=1.8
@@ -222,9 +222,9 @@ dependencies {
     
     
     // AppFusion dependencies
-    // compile 'com.google.cloud:google-cloud-vision:${cloud_vision_version}'
-    compileOnly 'org.projectlombok:lombok:${lombok_version}'
-    apt 'org.projectlombok:lombok:${lombok_version}'
+    compile "com.google.cloud:google-cloud-vision:${cloud_vision_version}"
+    compileOnly "org.projectlombok:lombok:${lombok_version}"
+ 	apt "org.projectlombok:lombok:${lombok_version}"
 
 }
 
