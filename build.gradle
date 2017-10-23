@@ -219,7 +219,7 @@ dependencies {
     
     
     // AppFusion dependencies
-    compile 'com.google.cloud:google-cloud-vision:${cloud_vision_version}'
+    // compile 'com.google.cloud:google-cloud-vision:${cloud_vision_version}'
     compileOnly 'org.projectlombok:lombok:${lombok_version}'
    
 }
