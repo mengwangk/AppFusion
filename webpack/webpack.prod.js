@@ -12,7 +12,7 @@ const commonConfig = require('./webpack.common.js');
 const ENV = 'production';
 const extractCSS = new ExtractTextPlugin(`[name].[hash].css`);
 
-const UPLOAD_URL = JSON.stringify('http://appfusion.herokuapp.com');
+const UPLOAD_URL = JSON.stringify('https://appfusion.herokuapp.com');
 
 module.exports = webpackMerge(commonConfig({ env: ENV }), {
     // Enable source maps. Please note that this will slow down the build.
