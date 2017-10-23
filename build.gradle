@@ -41,7 +41,7 @@ apply plugin: 'propdeps'
 apply plugin: 'com.moowork.node'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'idea'
-apply plugin: "io.franzbecker.gradle-lombok"
+// apply plugin: "io.franzbecker.gradle-lombok"
 
 defaultTasks 'bootRun'
 
@@ -224,7 +224,8 @@ dependencies {
     // AppFusion dependencies
     // compile 'com.google.cloud:google-cloud-vision:${cloud_vision_version}'
     compileOnly 'org.projectlombok:lombok:${lombok_version}'
-   
+    apt 'org.projectlombok:lombok:${lombok_version}'
+
 }
 
 clean {
